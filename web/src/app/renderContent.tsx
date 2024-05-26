@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 async function getData() {
-    const res = await fetch(url_api.mensagens)
+    const res = await fetch(url_api.mensagens, { next: { revalidate: 3600 } })
    
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
