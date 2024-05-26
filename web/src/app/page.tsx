@@ -3,7 +3,7 @@ import Header from '../components/Header/index';
 import Note from '../components/Note/index';
 import Render from "../components/Content/renderContent";
 
-export default async function Home() {
+export default function Home() {
 
   return (
 
