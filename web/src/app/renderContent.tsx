@@ -1,11 +1,11 @@
 import ArticleNano from "@/components/Article_nano";
 import { DateNano } from "@/Types/interfaces";
-import { url_api } from "@/utils/url-api";
-import axios from "axios";
+import { time_revalidating, url_api } from "@/utils/env_validation";
+// import axios from "axios";
 
 
 async function getData() {
-    const res = await fetch(url_api.mensagens, { next: { revalidate: 3600 } })
+    const res = await fetch(url_api.mensagens, { next: { revalidate: time_revalidating } })
    
     if (!res.ok) {
       // This will activate the closest `error.js` Error Boundary
