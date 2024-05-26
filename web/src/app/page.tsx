@@ -1,7 +1,6 @@
 import Nano from "../components/nano_icon";
 import Header from '../components/Header/index';
-import Note from '../components/Note/index';
-import Render from "../components/Content/renderContent";
+import Render from "./renderContent";
 
 export default function Home() {
 
@@ -20,14 +19,6 @@ export default function Home() {
       <Render />
 
     </main>
-
-    {/* <Note.base>
-      <p>
-        <code>
-        this.app {' '}
-        </code> and nano is my project projects
-      </p>
-    </Note.base> */}
     </>
 
     
