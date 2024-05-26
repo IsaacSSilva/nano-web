@@ -8,7 +8,7 @@ export default async function Render() {
 
     const getInfoNano = await axios({
         method: "get",
-        url: "http://localhost:3333/mensagens/",
+        url: process.env.URL_KEY_API ? (process.env.URL_KEY_API + '/mensagens/') : "http://localhost:3333/mensagens/",
     }).then((response) => {
 
         const render: any = []        
