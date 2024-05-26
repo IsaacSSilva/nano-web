@@ -1,4 +1,4 @@
-'use server'
+'use client'
 
 import Nano from "../components/nano_icon";
 import Header from '../components/Header/index';
