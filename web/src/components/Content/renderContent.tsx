@@ -1,4 +1,5 @@
-
+'use client'
+ 
 import ArticleNano from "@/components/Article_nano";
 import { DateNano } from "@/Types/interfaces";
 import axios from "axios";
