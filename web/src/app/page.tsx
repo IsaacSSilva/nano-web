@@ -16,7 +16,7 @@ export default function Home() {
       </Link>
     </Header.base>   
     
-    <main className="lg:max-w-[51rem] md:max-w-[32rem] max-w-96 min-h-screen h-full text-neutral-50 m-auto py-14 ">
+    <main className="lg:max-w-[51rem] md:max-w-[32rem] max-w-96 min-h-[50vh] text-neutral-50 m-auto py-14 ">
 
       <Render />
 

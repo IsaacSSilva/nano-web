@@ -1,14 +1,13 @@
 import ArticleNano from "@/components/Article_nano";
 import { DateNano } from "@/Types/interfaces";
 import { time_revalidating, url_api } from "@/utils/env_validation";
-// import axios from "axios";
+import { Vazio } from '../components/mensagemVazia/vazio';
 
 
 async function getData() {
     const res = await fetch(url_api.mensagens, { next: { revalidate: time_revalidating } })
    
     if (!res.ok) {
-      // This will activate the closest `error.js` Error Boundary
       throw new Error('Failed to fetch data')
     }
    
@@ -16,65 +15,32 @@ async function getData() {
   }
    
   export default async function Render() {
-    const render = await getData()    
-   
+    const render = await getData()   
+
     return (
         <>
         {
+
+            render[0] 
+            ? 
+            (
+                render.map((render: DateNano) => {
+                    return (
+                        <ArticleNano.base key={render.id}>
+                            <ArticleNano.content key={render.id} date_at={render.creat_at} title={render.title} message={render.mensagem} />
+                        </ArticleNano.base> 
+                    )
+                    
+                })
+            ) :
+            (
+                <div className="w-full h-[50vh] flex flex-col items-center justify-center gap-5 text-zinc-400">
+                    <Vazio />
+                </div>
+            )
             
-            render.map((render: DateNano) => {
-                return (
-                <ArticleNano.base key={render.id}>
-                    <ArticleNano.content key={render.id} date_at={render.creat_at} title={render.title} message={render.mensagem} />
-                </ArticleNano.base> 
-                )
-                
-            })
         }
         </>
         
     )
   }
-
-
-// export async function getRender() {
-//     const dataRender = await axios({
-//         method: "get",
-//         url: url_api.mensagens,
-//     }).then((response) => {
-
-//         const render: any = []        
-        
-//         response.data.map((e: DateNano) => {
-//             render.push(e)
-//         })
-
-//         return render    
-//     })     
-
-//     return dataRender
-// }
-
-// export async function R() {
-
-//     const render = await getRender()    
-
-//     return (
-//         <>
-
-//         {
-//             render.map((render: DateNano) => {
-//                 return (
-//                 <ArticleNano.base key={render.id}>
-//                     <ArticleNano.content key={render.id} date_at={render.creat_at} title={render.title} message={render.mensagem} />
-//                 </ArticleNano.base> 
-//                 )
-                
-//             })
-//         }
-            
-//         </>
-//     )
-
-
-// }

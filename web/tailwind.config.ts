@@ -8,11 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-25%)'
+          },
+          '50%': {
+            transform: 'translateY(0)'
+            
+          }
+        }
       },
+      animation: {
+        bounce1s: 'bounce 1s ease-in-out  infinite',
+        bounce2s: 'bounce 1.5s ease-in-out infinite',
+        bounce3s: 'bounce 3s ease-in-out infinite',
+        bounce4s: 'bounce 3.5s ease-in-out infinite',
+      }
     },
   },
   plugins: [],
