@@ -1,20 +1,31 @@
-export const formattedDate = (dateString: string) => {
+export const formattedDate = (update: string, creat: string ) => {
 
-    const dataMensagem = new Date(dateString) //.toLocaleDateString('pt-BR')
+    const update_at = new Date(update)
+
+    const creat_at = new Date(creat) //.toLocaleDateString('pt-BR')
     const dateNew = new Date() //.toLocaleDateString('pt-BR')
 
-    const day = dataMensagem.getDate().toString().padStart(2, '0')
-    const month = (dataMensagem.getMonth() + 1).toString().padStart(2, '0')
+    const day = creat_at.getDate().toString().padStart(2, '0')
+    const month = (creat_at.getMonth() + 1).toString().padStart(2, '0')
 
     const date = (day + '/' + month)
 
-    if (dataMensagem.getDate() == dateNew.getDate()) {
-        const today = ('today - ' + dataMensagem.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
+    if (creat_at.getDate() == dateNew.getDate()) {
+        if (creat_at != update_at) {
+            return new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
+        }
+        const today = ('today - ' + creat_at.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
         return today
     }
-    if (dataMensagem.getDate() == dateNew.getDate() + 1) {
-        const yesterday = ('yesterday - ' + dataMensagem.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
+    if (creat_at.getDate() == dateNew.getDate() + 1) {
+        if (creat_at != update_at) {
+            return new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
+        }
+        const yesterday = ('yesterday - ' + creat_at.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
         return yesterday
+    }
+    if (creat_at != update_at) {
+        new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
     }
 
     return date

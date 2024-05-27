@@ -16,7 +16,8 @@ async function getData() {
   }
    
   export default async function Render() {
-    const render = await getData()   
+    const render = await getData() 
+    
 
     return (
         <>
@@ -28,7 +29,7 @@ async function getData() {
                 render.map((render: DateNano) => {
                     return (
                         <ArticleNano.base key={render.id}>
-                            <ArticleNano.content key={render.id} date_at={formattedDate(render.creat_at)} title={render.title} message={render.mensagem} />
+                            <ArticleNano.content key={render.id} date_at={formattedDate(render.creat_at,render.update_at )} title={render.title} message={render.mensagem} />
                         </ArticleNano.base> 
                     )
                     
