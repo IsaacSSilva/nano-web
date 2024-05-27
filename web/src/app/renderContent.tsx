@@ -2,6 +2,7 @@ import ArticleNano from "@/components/Article_nano";
 import { DateNano } from "@/Types/interfaces";
 import { time_revalidating, url_api } from "@/utils/env_validation";
 import { Vazio } from '../components/mensagemVazia/vazio';
+import { formattedDate } from "@/utils/validateDate";
 
 
 async function getData() {
@@ -27,7 +28,7 @@ async function getData() {
                 render.map((render: DateNano) => {
                     return (
                         <ArticleNano.base key={render.id}>
-                            <ArticleNano.content key={render.id} date_at={render.creat_at} title={render.title} message={render.mensagem} />
+                            <ArticleNano.content key={render.id} date_at={formattedDate(render.creat_at)} title={render.title} message={render.mensagem} />
                         </ArticleNano.base> 
                     )
                     
