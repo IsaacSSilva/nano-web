@@ -1,11 +1,13 @@
 
 
-import { NanoSkew } from "./nano-dublue-skew";
+import { NanoSkew, NanoSkewJs, NanoSkewTs } from "./nano-dublue-skew";
 import { NanoMIn } from "./nano-min";
 
 const Nano = {
     Min: NanoMIn,
-    Skew: NanoSkew
+    N: NanoSkew,
+    Js: NanoSkewJs,
+    Ts: NanoSkewTs
 }
 
 export default Nano

@@ -12,7 +12,7 @@ export default function Home() {
     <Header.base>
     <h1 className="text-center text-4xl font-thin text-zinc-200 sm:hidden block">nano</h1>
       <Link href={'/'}>
-        <Nano.Skew/>
+        <Nano.N/>
       </Link>
     </Header.base>   
     
