@@ -10,7 +10,8 @@ export const metadata: Metadata = {
   creator: "https://github.com/IsaacGSS",
   appleWebApp: true,
   category: 'Blog Profissional.',
-  abstract: 'nano, app para posts sobre outros projetos de S. Silva.'
+  abstract: 'nano, app para posts sobre outros projetos de S. Silva.',
+  icons: './favicon.ico',
 };
 
 export default function RootLayout({
