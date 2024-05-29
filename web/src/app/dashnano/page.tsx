@@ -1,7 +1,8 @@
 import { getServerSession } from "next-auth/next"
 import { redirect } from "next/navigation";
-import { SignOut, singoutFunction } from './SignOut';
+
 import { url_api } from "@/utils/env_validation";
+import { SignOut, singoutFunction } from "@/app/ButtonAuth/SignOut";
 
 async function getData() {
   const res = await fetch(url_api.adm)
@@ -33,7 +34,8 @@ export default async function Home() {
     <main className="flex flex-col gap-5 w-full bg-white h-screen justify-center items-center text-zinc-950"> 
       <p>ola {session.user?.name} </p>
       <p>{session.user?.email}</p>
-      <SignOut />
+      <SignOut
+       />
     </main>
   )
 }

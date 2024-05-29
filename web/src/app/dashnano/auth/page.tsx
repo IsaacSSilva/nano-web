@@ -1,23 +1,21 @@
-'use client'
+import { redirect } from 'next/navigation.js'
 
-import { signIn } from "next-auth/react"
+import { getServerSession } from 'next-auth'
+import { LoginAuth } from '@/app/ButtonAuth/LoginAuth'
 
+export default async function Login() {
 
-export default function auth() {
+  const session = await getServerSession()
+
+  if(session){
+    return redirect('https://github.com/IsaacGSS/API_Frete/blob/main/server/tsconfig.json')
+  }
 
   return (
 
     <main className="flex w-full h-screen bg-slate-200 justify-center items-center ">
       
-      <button 
-        onClick={() => {
-          signIn('github', { callbackUrl: '/dashnano' } )
-          
-        }}
-        type="button" 
-        className="px-2.5 py-1.5 text-sm text-zinc-50 bg-zinc-900 rounded"
-        >auth github
-      </button>
+      <LoginAuth />
 
     </main>
   )

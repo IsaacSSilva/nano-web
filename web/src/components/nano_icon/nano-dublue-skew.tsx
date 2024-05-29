@@ -11,11 +11,8 @@ export const NanoSkew = () => {
     before:content-['string']
     after:content-['G']
 
-    hover:after:translate-x-[-1rem]
-    hover:after:translate-y-[-0.7rem]
-
-    before:hover:translate-x-[4.2rem]
-    before:hover:translate-y-[0.5rem]
+    hover:after:translate-x-[-1.8rem]
+    hover:before:translate-x-[4.2rem]
 
     before:transition-all
     before:duration-700

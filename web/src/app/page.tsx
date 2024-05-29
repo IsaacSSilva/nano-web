@@ -10,7 +10,7 @@ export default function Home() {
     <main className="bg-zinc-950 w-full min-h-screen">
     <Header.base>
       <h1 className="text-center text-4xl font-thin text-zinc-200 sm:hidden block">nano</h1>
-        <Link href={'/'}>
+        <Link href={'/dashnano'}>
           <IconNano.N/>
         </Link>
       </Header.base>
