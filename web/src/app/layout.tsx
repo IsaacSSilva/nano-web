@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const inter = Roboto_Flex({ subsets: ["greek"] });
+const inter = Roboto_Flex({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "nano",
