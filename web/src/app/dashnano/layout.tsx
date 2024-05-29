@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
+import { Inter, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const inter = Roboto_Flex({ subsets: ["greek"] });
+const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Flex({ subsets: ["latin"], variable: '--roboto' });
 
 export const metadata: Metadata = {
-  title: "nano",
-  description: "nano, app para posts sobre outros projetos de S. Silva.",
+  title: "Dashnano",
+  description: "Dashnano e o Dashboard e app para gerenciar aplicacoes futuras.",
   creator: "https://github.com/IsaacGSS",
   appleWebApp: true,
-  category: 'Blog Profissional.',
-  abstract: 'nano, app para posts sobre outros projetos de S. Silva.',
-  icons: './favicon.ico',
+  category: 'Dashboard.'
 };
 
 export default function RootLayout({
