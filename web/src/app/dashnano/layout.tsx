@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Flex } from "next/font/google";
-import "./globals.css";
+import { Roboto_Flex } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto_Flex({ subsets: ["latin"], variable: '--roboto' });
 
 export const metadata: Metadata = {
@@ -20,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className} min-h-screen`}>{children}</body>
+      <body className={`${roboto.className} min-h-screen`}>{children}</body>
     </html>
   );
 }
