@@ -19,7 +19,7 @@ const session = await getServerSession()
 
   const adm = await getData() 
   
-  if(session.user?.email != adm[0].email){ 
+  if(session.user?.email != adm[0]?.email){ 
 
     const auth = {
         auth: true,
