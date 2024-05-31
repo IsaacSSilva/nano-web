@@ -20,7 +20,7 @@ export default async function NanoX() {
     <section className=" max-w-7xl min-h-screen m-auto mx-40 grid grid-cols-5 gap-10">
       
       <article className="flex flex-col gap-5 justify-center items-center text-sm text-zinc-50 lg:bg-zinc-800/10">
-        {
+        {/* {       // Teste de bug em producao
           auth ? (
 
             <>
@@ -157,7 +157,7 @@ export default async function NanoX() {
              
             </>
           )
-        }
+        } */}
       </article>
       
       <main className="
