@@ -6,6 +6,7 @@ import Note from "@/components/Note";
 
 // import { Menu, MenuBetaTeste } from './navigation';em prosimas atualizacoes;
 import { MenuBetaTeste } from './navigation';
+import { Topics } from './topics';
 
 
 export default function NanoX() {
@@ -45,27 +46,7 @@ export default function NanoX() {
             Topicos:
           </h2>
 
-        <Header.linsten>
-          <Header.topics.root>
-
-
-              <Header.topics.title date_at="20/05">
-               Relogio digital - Web
-              </Header.topics.title>
-
-              
-              <Header.topics.body
-                flag="estudo"
-                url_img="https://raw.githubusercontent.com/IsaacGSS/relogio_digital/main/md/vid/2022-08-02-16-05-59.gif"
-                alt="Relogio Digital gif"
-                width={360}
-                height={360}
-              >
-                Um pequena aplicacao que foi dado um fork e eu ajudei a deixar reesponsivo.
-              </Header.topics.body>
-
-          </Header.topics.root>
-        </Header.linsten>
+          <Topics />
 
 
         </Header.body>
