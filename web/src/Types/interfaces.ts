@@ -37,6 +37,16 @@ export interface DateNano {
     update_at: string
 }
 
+export interface DateTopics {
+    id: number        
+    title: string       
+    description: string 
+    flag: string        
+    url_img: string   
+    creat_at: string      
+    update_at: string      
+}
+
 export interface Iuser { 
     auth: boolean; 
     user: { 
