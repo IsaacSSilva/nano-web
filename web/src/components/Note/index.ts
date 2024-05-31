@@ -1,7 +1,7 @@
-import { NoteBase } from "./base";
+import { root } from "./root";
 
 const Note = {
-    base: NoteBase
+    root
 }
 
 export default Note

@@ -1,7 +1,19 @@
-import { HeaderBase } from "./base"
+import { body } from "./body"
+import { centerBody, linsten, titleForTopics, topics } from "./listen"
+import { root } from "./root"
+import { top } from "./top"
 
 const Header = {
-    base: HeaderBase
+    topics: {
+        root: topics,
+        body: centerBody,
+        title: titleForTopics,
+
+    },
+    linsten,
+    body,
+    top,
+    root
 }
 
 export default Header

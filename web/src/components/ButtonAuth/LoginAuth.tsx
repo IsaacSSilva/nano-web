@@ -19,3 +19,25 @@ export const LoginAuth = () => {
       </button>
     )
 }
+
+export const LoginAuthTwo = () => {
+  return (
+      <button 
+      onClick={() => {
+        signIn('github', { callbackUrl: '/nanox' } )
+        
+      }}
+      type="button" 
+      className="
+      size-fit p-1
+      bg-emerald-500
+      hover:bg-emerald-600/90
+
+      transition-all
+      duration-150
+      
+      text-sm text-zinc-950 rounded cursor-pointer "
+      >auth
+    </button>
+  )
+}
