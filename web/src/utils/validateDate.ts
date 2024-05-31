@@ -10,20 +10,22 @@ export const formattedDate = (update: string, creat: string ) => {
 
     const date = (day + '/' + month)
 
-    if (creat_at.getDate() == dateNew.getDate()) {
-        if (creat_at != update_at) {
-            return 'today - ' + new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
-        }
-        const today = ('today - ' + creat_at.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
-        return today
-    }
     if (creat_at.getDate() == dateNew.getDate() + 1) {
-        if (creat_at != update_at) {
-            return 'yesterday - ' + new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
-        }
+        // if (creat_at != update_at) {
+        //     return 'yesterday - ' + new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
+        // }
         const yesterday = ('yesterday - ' + creat_at.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
         return yesterday
     }
+
+    if (creat_at.getDate() == dateNew.getDate()) {
+        // if (creat_at != update_at) {
+        //     return 'today - ' + new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
+        // }
+        const today = ('today - ' + creat_at.toLocaleTimeString('pt-BR').slice(0, -3) + '.')
+        return today
+    }
+
     if (creat_at != update_at) {
         new Date(update).toLocaleTimeString('pt-BR').slice(0, -3) + ' edit.'
     }
