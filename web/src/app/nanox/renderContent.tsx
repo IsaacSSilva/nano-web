@@ -7,7 +7,7 @@ import getData from '../api/http/get';
 
 
 export default async function Render() {
-    const render = await getData() 
+    const render = await getData.mensagens() 
     
 
     return (
