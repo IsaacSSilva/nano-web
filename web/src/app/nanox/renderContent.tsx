@@ -1,21 +1,12 @@
 import ArticleNano from "@/components/Article_nano";
 import { DateNano } from "@/Types/interfaces";
-import { time_revalidating, url_api } from "@/utils/env_validation";
-import { Vazio } from '../components/mensagemVazia/vazio';
+import { Vazio } from '../../components/mensagemVazia/vazio';
 import { formattedDate } from "@/utils/validateDate";
+import getData from '../api/http/get';
 
 
-async function getData() {
-    const res = await fetch(url_api.mensagens, { next: { revalidate: time_revalidating } })
-   
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
-    }
-   
-    return res.json()
-  }
-   
-  export default async function Render() {
+
+export default async function Render() {
     const render = await getData() 
     
 
