@@ -1,4 +1,3 @@
-import { authAutozrization } from "@/app/api/auth/session"
 import { Children } from '../../Types/interfaces';
 
 export const root = async ({children}: Children) => {
