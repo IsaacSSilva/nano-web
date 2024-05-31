@@ -19,9 +19,9 @@ const Content = ({title, message, date_at}: DateContent) => {
     return (
     <>
         <h2 className="font-bold text-2xl">{title}</h2>
-        <p className="text-wrap text-sm">
+        <article className="text-wrap text-sm">
             {message}
-        </p>
+        </article>
         <p className="font-extralight text-xs text-right -m-2.5 opacity-65">{date_at}</p>
     </>
         
