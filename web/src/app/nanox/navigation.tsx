@@ -37,18 +37,17 @@ export const MenuBetaTeste = async () => {
     const auth = await authAutozrization()
 
     return (
-        <>
-            <article className="flex flex-col gap-5 justify-center items-center text-sm text-zinc-50 lg:bg-zinc-800/10">
+      <>
         {       // Teste em producao
           auth ? (
 
-            <>
-            <div className="h-full">
-            <p className="m-auto py-2.5 text-base font-black"> Ola <strong className="text-rose-600 text-2xl font-thin">Dev</strong> , ao <strong className="text-rose-600 text-2xl font-thin">nano X</strong></p>
+            <article className="personColorTestNav hidden lg:col-span-1 lg:flex h-screen  pb-2.5  flex-col gap-5 justify-center items-center text-sm text-zinc-50 ">
+            <div className="h-full min-w-full px-3">
+            <p className="m-auto py-2.5 text-base font-black"> Ola <strong className="text-rose-600 text-2xl font-thin">Dev</strong> </p>
             
             <nav title="nav root from User comun" className="space-y-3 mb-16">
               <span>From User comun:</span>
-                <ul className="flex flex-col gap-2.5 text-lg">
+                <ul className="flex flex-col gap-2.5 text-lg ml-1.5">
                   <a href="/">
                     <li>Home</li>
                   </a>
@@ -80,7 +79,7 @@ export const MenuBetaTeste = async () => {
             
             <nav title="nav root from developer" className="space-y-3 mb-5">
               <span>From Developer:</span>
-                <ul className="flex flex-col gap-2.5 font-mono text-lg">
+                <ul className="flex flex-col gap-2.5 font-mono text-lg ml-1.5">
                   <a href="/">
                     <li>root</li>
                   </a>
@@ -118,15 +117,15 @@ export const MenuBetaTeste = async () => {
               </div>
             </div>
              
-            </>
+            </article>
             
           ) : (
-            <>
+            <article className="h-screen fixed pb-2.5 flex flex-col gap-5 justify-center items-center text-sm text-zinc-50 lg:bg-zinc-800/10">
             <div className="h-full">
             <p className="m-auto py-2.5 text-base font-black"> Bem-Vindo ao <strong className="text-rose-600 text-2xl font-thin">nano X</strong></p>
             
             <nav className="space-y-3 mb-16">
-                <ul className="flex flex-col gap-2.5 text-lg">
+                <ul className="flex flex-col gap-2.5 text-lg ml-1.5">
                   <a href="/">
                     <li>Home</li>
                   </a>
@@ -174,11 +173,9 @@ export const MenuBetaTeste = async () => {
 
             </div>
              
-            </>
+            </article>
           )
         }
-      </article>
-        </>
-        
+      </>        
     )
 }

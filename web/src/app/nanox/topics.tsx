@@ -8,16 +8,14 @@ export const Topics = async () => {
     const render = await getData.topics()    
 
     return (
-        <>
+        <Header.linsten>
             {
                 render[0] ? (
                     render.map((topic: DateTopics) => {
-                        console.log(topic.creat_at);
-                        console.log(topic.update_at);
-                        
+
 
                         return (
-                            <Header.linsten key={topic.id}>
+                            
                                 <Header.topics.root key={topic.id}>
                                     
                                     <Header.topics.title key={topic.id} date_at={formattedDate(topic.creat_at,topic.update_at)}>
@@ -29,14 +27,14 @@ export const Topics = async () => {
                                     flag={topic.flag}
                                     url_img={topic.url_img}
                                     alt={topic.title}
-                                    width={360}
-                                    height={360}
+                                    width={230}
+                                    height={230}
                                     >
                                         {topic.description}
                                     </Header.topics.body>
 
                                 </Header.topics.root>
-                            </Header.linsten>
+                            
                         )
                     })
                 ) : (
@@ -46,7 +44,7 @@ export const Topics = async () => {
                     </div>
                 )
             }
-        </>
+        </Header.linsten>
         
     )
 }

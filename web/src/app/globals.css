@@ -31,3 +31,33 @@ body {
     text-wrap: balance;
   }
 }
+
+.scrollPerson::-webkit-scrollbar {
+  width: 12px; /* largura da barra de rolagem inteira */
+}
+.scrollPerson::-webkit-scrollbar-track {
+  background: transparent; /* cor da área de rastreamento */
+}
+.scrollPerson::-webkit-scrollbar-thumb {
+  background-color: transparent; /* cor do polegar de rolagem */
+  border-radius: 20px; /* arredondamento do polegar de rolagem */
+  border: 3px solid transparent; /* cria uma margem em torno do polegar de rolagem */
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* largura da barra de rolagem inteira */
+}
+body::-webkit-scrollbar-track {
+  background: rgba(39, 39, 42, 0.493); /* cor da área de rastreamento */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(225 29 72); /* cor do polegar de rolagem */
+  border-radius: 20px; /* arredondamento do polegar de rolagem */
+  border: 3px solid rgba(39, 39, 42, 0.493); /* cria uma margem em torno do polegar de rolagem */
+}
+
+/* person color for layout and distac */
+
+/* .personColorTestRender{} */
+/* .personColorTestHeader{} */
+/* .personColorTestNav{} */
