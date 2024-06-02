@@ -96,7 +96,7 @@ export const MenuBetaTeste = async () => {
 
             </div>
 
-            <div className="w-full px-2 py-2.5 flex justify-between items-center">
+            <div className="w-full px-2 py-2.5 flex md:gap-5 md:justify-normal justify-between items-center">
               
 
                             
@@ -120,7 +120,7 @@ export const MenuBetaTeste = async () => {
             </article>
             
           ) : (
-            <article className="h-screen fixed pb-2.5 flex flex-col gap-5 justify-center items-center text-sm text-zinc-50 lg:bg-zinc-800/10">
+            <article className="personColorTestNav hidden lg:col-span-1 lg:flex h-screen  pb-2.5  flex-col gap-5 justify-center items-center text-sm text-zinc-50">
             <div className="h-full">
             <p className="m-auto py-2.5 text-base font-black"> Bem-Vindo ao <strong className="text-rose-600 text-2xl font-thin">nano X</strong></p>
             
@@ -158,7 +158,7 @@ export const MenuBetaTeste = async () => {
 
             </div>
 
-            <div className="w-full px-2 py-2.5 flex justify-between items-center">
+            <div className="w-full px-2 py-2.5 flex md:gap-5 md:justify-normal justify-between items-center">
               
 
               <User className="size-10 p-1 rounded-full bg-zinc-500 text-zinc-50"/>
