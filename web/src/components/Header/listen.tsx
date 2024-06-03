@@ -13,7 +13,7 @@ export const Flag = ({children, flag , ...rest}: ChildrenDiv) => {
 
 export const linsten = ({children}: Children) => {
     return (
-    <ul className="px-1 mt-2.5 md:flex flex-col-reverse w-fit m-auto gap-5 grid  grid-cols-2 max-[375px]:grid-cols-1 grid-flow-row" >
+    <ul className="px-1 mt-2.5 text-zinc-50 md:flex flex-col-reverse w-fit m-auto gap-5 grid  grid-cols-2 max-[375px]:grid-cols-1 grid-flow-row" >
         {children}      
     </ul>
     )
