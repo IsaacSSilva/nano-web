@@ -24,8 +24,16 @@ export interface ChildrenDiv extends HTMLAttributes<HTMLDivElement> {
     flag: string
 }
 export interface DateContent {
-    title: string, 
-    message: string, 
+    title?: string, 
+    message?: string, 
+    img?: string,
+    link?: [
+        {
+            url: string,
+            name: string
+        }
+    ]
+    ,
     date_at: string
 }
 

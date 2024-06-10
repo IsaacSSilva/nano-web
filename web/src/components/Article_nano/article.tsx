@@ -1,5 +1,7 @@
 import { Children, DateContent } from "@/Types/interfaces"
 import IconNano from "../nano_icon"
+import Image from 'next/image';
+import Link from "next/link";
 
 const Base = ({children}:Children) => {
     return (
@@ -15,14 +17,47 @@ const Base = ({children}:Children) => {
     )
 }
 
-const Content = ({title, message, date_at}: DateContent) => {
+const Content = ({title, message, img, link, date_at}: DateContent) => {
     return (
     <>
-        <h2 className="font-bold text-2xl">{title}</h2>
-        <article className="text-wrap text-sm">
-            {message}
+        
+        <article className="text-wrap text-sm flex flex-col gap-5">
+            {
+                title ? (
+                    <h2 className="font-bold text-2xl">{title}</h2>
+                ) : null
+            }
+
+            <article>
+                {message}
+                {
+                    link ? (
+                        <ul>
+                            {
+                                link.map((L) => {
+                                    return (
+                                        <Link href={L.url}>
+                                    <li>
+                                        {L.name}
+                                    </li>
+                                </Link>  
+                                    )                              
+                                })
+                            }
+                            
+                        </ul>
+                    ) : null
+                }
+            </article>
+
+            {
+                img ? (
+                    <img src="" alt="" />
+                ) : null
+            }
+
         </article>
-        <p className="font-extralight text-xs text-right -m-2.5 opacity-65">{date_at}</p>
+        <span className="font-extralight text-xs text-right -m-2.5 opacity-65">{date_at}</span>
     </>
         
     )
