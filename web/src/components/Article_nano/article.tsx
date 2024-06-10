@@ -36,11 +36,11 @@ const Content = ({title, message, img, link, date_at}: DateContent) => {
                             {
                                 link.map((L) => {
                                     return (
-                                        <Link href={L.url}>
-                                    <li>
-                                        {L.name}
-                                    </li>
-                                </Link>  
+                                    <Link key={L.name} href={L.url}>
+                                        <li>
+                                            {L.name}
+                                        </li>
+                                    </Link>  
                                     )                              
                                 })
                             }
